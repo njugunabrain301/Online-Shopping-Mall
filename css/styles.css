@@ -1,0 +1,1411 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    text-transform: none;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.file-field .btn-small{
+    overflow: hidden;
+    line-height: initial;
+    height: initial;
+    padding: 7px;
+    margin-top: 10px;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.border-radius-1{
+    border-radius: 5px;
+}
+.copy-btn{
+    padding: 5px;
+    line-height: initial;
+    height: initial;
+    float: right;
+    margin: 7px;
+    z-index: 10;
+}
+.copy-link-div input{
+    opacity : 0;
+    height: 0;
+    width: 0;
+}
+.copy-link-div{
+    height: 0;
+    width: 100%;
+    display: block;
+}
+.copy-link-div.item-page{
+    position: absolute;
+    margin-top: -5px;
+}
+.tooltip{
+    float: right;
+    margin-top: 7px;
+    right: 0px;
+    padding: 3px;
+    opacity: 0;
+    transition-duration: .3s;
+}
+.tooltip-show{
+    opacity: 1;
+    transition-duration: .3s;
+}
+.shadow,
+.shadow-hover{
+    box-shadow: 0px 0px 5px grey;
+}
+.shadow-hover:hover{
+    box-shadow: 0px 0px 12px grey;
+}
+.clue{
+    position: absolute;
+    right: 10px;
+}
+.tab{
+    width: 150px;
+}
+.fade-in-abs-bottom-right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 5px;
+    width: 50%;
+    line-height: inherit;
+    background: linear-gradient(to right, rgba(255,255,255, 0), rgba(255,255,255,1) 75%);
+}
+.pointer{
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
+}
+.center{
+    margin: auto;
+}
+content{
+    width: 100%;
+}
+:root{
+    --main_color: #00b300;
+    --color1: #64ed64;
+    --color2: white;
+    --color3: black;
+}
+/******************FORM INPUT**********************/
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], select{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px black;
+    text-align: center;
+    margin: 15px 0px;
+}
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover,
+input[type="number"]:hover,
+select:hover{
+    border-bottom: solid 1px var(--color1);
+}
+/***************BUTTON*********************/
+button, input[type='submit']{
+    background-color: var(--color3);
+    border: none;
+    color: var(--color2);
+    cursor: pointer;
+}
+button:hover, input[type='submit']:hover{
+    background-color: var(--main_color);
+}
+.button-2{
+    background-color: var(--main_color);
+    color: var(--color2);
+}
+.button-2:hover{
+    background-color: var(--color2);
+}
+.btn, .btn-small{
+    text-transform: none;
+}
+.btn:hover, .btn-small:hover{
+    background-color: var(--color3) !important;
+    color: var(--color2);
+}
+/***************HEADER**********************/
+header *{
+    position: relative;
+}
+header{
+    width: 100%;
+    display: block;
+    height: 60px;
+    overflow: hidden;
+}
+header h1{
+    margin: 7px;
+    font-size: 30pt;
+    float: left;
+}
+header nav{
+    float: right !important;
+    box-shadow: 0 0 0;
+}
+header button{
+    background-color: transparent;
+    border: none;
+    margin: 12px;
+    font-size: 14pt;
+    color: var(--color3);
+    top: -10px;
+}
+header button:hover{
+    color: var(--main_color);
+    background-color: transparent;
+    text-decoration: underline;
+}
+header .profile-area .profile-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid 2px green;
+}
+header .profile-area img{
+    width: 80px;
+    height: 80px;
+}
+header .profile-area{
+    width: 100%;
+    line-height: initial;
+    text-align: center;
+    padding: 20px;
+    background-image: url("../images/website/menu-bg.jpg");
+    background-size: cover;
+    object-fit: fill;
+}
+header .profile-area .img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+header .profile-area a{
+    padding: 0px;
+    color: black;
+}
+header .profile-area a:hover{
+    text-decoration: underline;
+    color: green;
+}
+header .profile-area{
+    display: none;
+}
+header .full-profile-area{
+    height: 20px;
+    padding: 5px;
+}
+header .full-profile-area div{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 2px var(--main_color);
+    overflow: hidden;
+    margin-top: 5px;
+}
+header .full-profile-area img{
+    min-width: 100%;
+    min-height: 100%;
+    width: 50px;
+}
+header .sidenav .profile-area{
+    display: block;
+}
+header .sidenav li > a > i, .sidenav li > a > [class^="mdi-"], .sidenav li > a li > a > [class*="mdi-"], .sidenav li > a > i.material-icons {
+    line-height: 10px;
+    margin: 0 10px 0 0;
+    height: 30px;
+}
+header .sidenav .full-profile-area{
+    display: none;
+}
+.sidenav li > a {
+    height: 30px;
+    line-height: 10px;
+}
+li a.grey-text.text-darken-1:hover{
+    background-color: initial;
+    text-decoration: underline;
+}
+header .header-hidden{
+    display: none;
+}
+header .sidenav .header-hidden{
+    display: block;
+}
+header.dark,
+header.dark *{
+    background-color: #202020;
+    color: white;
+}
+header.dark .sidenav li i,
+header.dark .sidenav li a{
+    color: #909090 !important;
+}
+header.dark .divider{
+    background-color: #909090 !important;
+}
+header.dark .profile-area .img {
+    background-color: transparent;
+}
+/***************MENU*************************/
+menu{
+    justify-content: center;
+    background-color: var(--main_color);
+    text-align: center;
+}
+menu button{
+    color: var(--color2);
+    background-color: transparent;
+    margin: 15px 8px;
+}
+menu button:hover{
+    background-color: transparent;
+    text-decoration: underline;
+}
+.sidenav,
+.side-nav{
+    width: 250px;
+    margin-top: 10px;
+    text-align: left;
+}
+.sidenav a{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    line-height: 0.5;
+}
+.sidenav button{
+    width: 100%;
+    text-align: left;
+    line-height: 0.5;
+}
+.sidenav #menu-btns a{
+    color: black !important;
+}
+.sidenav #menu-btns a:hover{
+    text-decoration: underline;
+}
+#menu-links-trigger{
+    margin: 4px 10px;
+}
+#menu-links-trigger i{
+    font-size: 13pt;
+}
+#cart_count,
+#apt_count,
+.note{
+    padding: 7px;
+    position: absolute;
+    top: -23px;
+    margin-left: -7px;
+    line-height: 0.5;
+    border-radius: 50%;
+    height: 23px;
+    width: 23px;
+    text-align: center;
+    vertical-align: middle;
+}
+.sidenav #cart_count,
+.sidenav #apt_count{
+   left: 200px; 
+}
+menu .top{
+    display: none;
+}
+.sidenav menu .top{
+    display: initial;
+}
+#home-menu menu.top{
+    display: none;
+}
+.sidenav menu button{
+    background-color: transparent;
+    padding: 10px;
+    font-size: 12pt;
+}
+.sidenav menu{
+    background-color: transparent;
+}
+/**********************TABS**********************/
+.tabs *{
+    position: initial;
+}
+.tabs .tab{
+    margin-right: 2px;
+}
+.tabs .tab a {
+    background-color: rgba(0,250,0, 0.5);
+    color: var(--color3);
+}
+.tabs .tab a:hover{
+    background-color: rgba(0,200,0, 0.5);
+    color: var(--color3);
+}
+.tabs .tab a.active{
+    background-color: rgba(0,125,0, 0.5);
+    color: var(--color3);
+}
+.tabs .indicator{
+    background-color: var(--color3);
+}
+.tabs .tab a:focus.active, 
+.tabs .tab a:focus{
+    color: var(--color3);
+    background-color: rgba(0,200,0, 0.5);
+}
+/***************FILTER**********************/
+.filter{
+    background-color: #202020;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    position: absolute;
+    z-index: 10;
+    opacity: 1;
+    left: -7px;
+    top: 7px;
+    transition-duration: .5s;
+}
+.filter-hidden{
+    transition-duration: .5s;
+    opacity: 0;
+    pointer-events: none;
+    top: 30px;
+}
+.filter .input-field{
+    color: var(--color2);
+}
+.filter .input-field input,
+.filter .input-field input:active,
+.filter .input-field select,
+.filter .input-field span{
+    color: var(--color2);
+    line-height: 35px;
+    height: 35px;
+}
+.filter .input-field span{
+    font-size: 10pt;
+    padding-right: 5px;
+}
+.filter-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+#search-box .filter .btn-small:hover{
+    color: var(--color2) !important;
+    text-decoration: underline;
+}
+/**********************SEARCH FORM**********************/
+#search-box{
+    display: flex;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.search{
+    width: 200px;
+    display: flex;
+}
+.search input[type='text']{
+    padding: 2px !important;
+    height: 25px;
+}
+#search-box .top-btn{
+    background-color: transparent;
+    color: black;
+    padding: 7px;
+    height: initial;
+}
+#search-box button:hover{
+    color: var(--main_color);
+}
+/*****************HOME PAGE************************/
+#home{
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+}
+#home .home-image{
+    top: 0px;
+    left: 0;
+    min-width: 100%;
+    position: absolute; 
+    max-height: 475px;
+    z-index: -4;
+}
+#home #home-search{
+    position: relative;
+    width: 250px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 15pt;
+    border-radius: 7px;
+    padding: 20px;
+}
+#home #home-search form span{
+    width: 100%;
+}
+#home #home-search form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 250px;
+    padding-right: 30px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255, 0.5);
+}
+#home #home-search form div{
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+}
+#home #home-search form div i{
+    height: 30px;
+    padding: 5px;
+    right: -20px;
+    bottom: 8px;
+    position: absolute;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+#home #home-search form div i:hover{
+    background-color: var(--main_color);
+    color: var(--color2);
+}
+#home #home-search form div input[type='text']{
+    padding-right: 30px;
+}
+#home .tag-line{
+    text-align: center;
+}
+#home .home-ads{
+    display: flex;
+    justify-content: center;
+}
+.panel{
+    width: 1000px;
+    margin: 20px auto;
+    max-width: 90%;
+}
+.panel .title{
+    background-color: var(--color3);
+    color: var(--color2);
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.panel .title a{
+    padding: 10px 20px;
+    float: right;
+}
+.panel .title span{
+    float: left;
+    padding: 10px 20px;
+}
+#home .panel .store-div{
+    box-shadow: none;
+}
+#home .panel .store-div:hover{
+    cursor: auto;
+}
+#home .panel .store-div .clickable{
+    cursor: pointer;
+}
+#home menu{
+    margin-top: 160px;
+}
+.home header{
+    height: 100px;
+}
+.home header h1{
+    margin: 12px;
+}
+/******************LOG IN & REGISTER*************/
+.form{
+    width: 600px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 10px grey;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.form #radios{
+    margin-top: -30px;
+    margin-bottom: 10px;
+}
+.form .right img{
+    display: none;
+}
+.login{
+    height: 330px;
+}
+.register{
+    height: 630px;
+}
+.form img{
+    width: 50%;
+    height: 100%;
+}
+.form form{
+    padding: 0px 0px;
+    text-align: center;
+}
+.form .right{
+    width: 50%;
+}
+.form .right .container{
+    padding: 0px;
+}
+.form .right img{
+    width: 100%;
+    height: 80px;
+}
+.register .input-field{
+    margin: 0px;
+}
+.register .input-field input{
+    margin: 0px auto;
+}
+select{
+    display: block;
+    text-align: left;
+}
+/*****************Add Form***********************/
+.addForm input{
+    text-align: left;
+}
+.addForm{
+    box-shadow: 0px 0px 5px grey;
+    max-width: 600px;
+    margin: 20px auto;
+    min-height: 650px;
+    height: 650px;
+}
+.addForm form{
+    padding: 0px 20px 20px 20px;
+}
+.addForm img{
+    height: 100%;
+}
+.addForm .spec-small input,
+.specs .spec-small input{
+    max-width: 50px;
+    line-height: 30px;
+    height: 30px;
+    margin: 3px 4px;
+    margin-top: 0px;
+    padding: 0;
+}
+.addForm .spec-small.color .btn-small,
+.specs .spec-small.color .btn-small{
+    margin: 3px;
+    margin-top: -7px;
+}
+.addForm .smaller-select,
+.specs .smaller-select{
+    width: 90%;
+}
+.addForm .select-info-icon{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    cursor: pointer;
+}
+.addForm .disable-select-info-icon{
+    cursor: default;
+    color: gray;
+}
+.addForm .change .input-field,
+.specs .change .input-field,
+#payment-modal .input-field{
+    margin-bottom: 7px;
+}
+/*****************SEARCH*********************/
+.products .product{
+    width: 250px;
+    height: 290px;
+    margin: 10px;
+    box-shadow: 0px 0px 3px grey;
+    overflow: none;
+}
+.products .product-small{
+    width: 180px;
+    height: 205px;
+}
+.products .product:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 8px grey;
+}
+.products .product img{
+    top: 0px;
+    left: 0;
+    width: 250px;
+    height: 200px;
+    position: relative;
+    z-index: 0;
+}
+.products .product-small img{
+    width: 180px;
+    height: 130px;
+}
+.products .product-small h5{
+    font-size: 12pt;
+}
+.products .product-small h6{
+    font-size: 10pt;
+}
+.products a{
+    text-decoration: none;
+}
+.products .product td{
+    text-decoration: none;
+    color: black;
+}
+#search-content{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#promotions{
+    margin: 20px;
+/*    width: 250px;*/
+    padding: 10px 40px;
+    min-height: 500px;
+    background-color: #202020;
+    display: none;
+}
+#products-div{
+    padding: 10px 40px;
+}
+.product table tr{
+    border: none;
+}
+.product table tr td{
+    padding: 3px;
+    border: none;
+    padding: 0px 10px;
+}
+.product h5{
+    padding: 0px;
+    margin: 0px;
+}
+.product table a:hover{
+    text-decoration: underline;
+}
+.delete-prod{
+    margin-top: -7px;
+}
+/*********************PRODUCT********************/
+#image-slider{
+    position: relative;
+    max-width: 620px;
+    width: 100%;
+    max-height: 550px;
+    padding: 20px;
+    overflow: hidden;
+}
+#image-slider .slider-image{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition-duration: .3s;
+    z-index: 2;
+}
+#slider-next, #slider-prev{
+    position: relative;
+    margin-top: 40%;
+    margin-bottom: 50%;
+    font-size: 20pt;
+    cursor: pointer;
+    z-index: 5;
+}
+#slider-next:hover, 
+#slider-prev:hover{
+    color: var(--main_color);
+}
+#slider-next{
+    float: right;
+}
+#image-slider .slider-hide-left{
+    left: -100%;
+    transition-duration: .3s;
+    z-index: 2;
+}
+#image-slider .slider-hide-right{
+    left: 100%;
+    transition-duration: .3s;
+    z-index: 2;
+}
+#image-slider .slider-current{
+    right: 0;
+    left: 0;
+    transition-duration: .3s;
+}
+#image-slider .slider-indicator{
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    bottom: 0;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#image-slider .slider-indicator .slider-indicator-unit{
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(10,10,10, 0.5);
+    margin: 2px 5px;
+}
+#image-slider .slider-indicator .slider-indicator-unit.active{
+    background-color: rgba(70,255,70, 1);
+}
+#product{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#product form{
+    max-width: 670px;
+    width: 100%;
+    padding: 0px 20px;
+}
+#product table tr{
+    border: none;
+}
+#product table tr td{
+    padding: 3px;
+    border: none;
+}
+#product table th{
+    padding: 0px 5px;
+    width: 130px;
+}
+#product h1,
+#product h5{
+    padding: 0px;
+    margin: 0px;
+}
+#product .order-btn{
+    margin: 20px;
+}
+#product #item-qty{
+    width: 100px;
+}
+.selectedSpec{
+    border: solid 1px green;
+    height: 22px !important;
+    width: 22px !important;
+}
+.selectedSpec.sizes-available{
+    height: 27px !important;
+}
+.book{
+    min-height: 500px;
+}
+.modal-close{
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+}
+.book label, .book .input-field input, 
+.reschedule label, .reschedule .input-field input{
+    text-align: left;
+}
+.book .input-field .select-wrapper input.select-dropdown {
+    width: 280px;
+    text-align: left;
+    padding-right: 20px;
+}
+/***************PROFILE*************************/
+.profile{
+    max-width: 1000px;
+    padding: 20px;
+    margin: 20px  auto;
+}
+.profile table tr{
+    padding: 20px 20px;
+}
+.profile label{
+    font-size: 10pt;
+}
+.profile table tr td label{
+    display: flex;
+}
+.profile div img{
+    max-width: 100%;
+    max-height: 300px;
+}
+#profile-content .change,
+.change{
+    padding: 20px;
+    padding-top: 30px;
+    text-align: center;
+}
+#profile-content .change .closer,
+.change .closer{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+#profile-content .change h2,
+.change h2{
+    font-size: 13pt !important;
+}
+#profile-content .change .input-field,
+.change .input-field{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: auto;
+}
+#profile-content .change .input-field label,
+.change .input-field label{
+    text-align: center;
+}
+/****************CART/APT****************************/
+.cart_item, .apt_item{
+    box-shadow: 0px 0px 5px grey;
+    margin: 10px;
+}
+.cart_item button, .apt_item button{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.apt_item .s12 button, 
+.cart_item .s12 button{
+    padding: 0px 7px;
+    line-height: 30px;
+    height: 30px;
+}
+/*************STORES****************************/
+#ajax_stores .btn-small{
+    letter-spacing: initial;
+    line-height: initial;
+    padding: 2px 5px;
+    height: initial;
+}
+#ajax_stores a:hover{
+    text-decoration: underline;
+}
+#ajax_stores i{
+    cursor: pointer;
+}
+/*****************FLEX************************/
+.flex-wrap-center{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+.flex{
+   display: flex; 
+}
+/***************Request Stall*****************/
+#request-stall .package{
+    padding: 20px;
+    width: 280px;
+    height: 400px;
+    box-shadow: 0px 0px 5px grey;
+    margin: 20px;
+}
+#request-stall .package h4{
+    text-align: center;
+}
+#request-stall .package .top{
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: red;
+    top: 0;
+}
+#request-stall .package span{
+    display: block;
+    text-align: center;
+}
+#request-stall .price{
+    font-size: 16pt;
+}
+#request-stall .price-add{
+    font-size: 10pt;
+    font-style: italic;
+}
+#request-stall-form{
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 5px grey;
+}
+#request-stall-form img{
+    width: 300px;
+    height: 100%;
+}
+#request-stall-form form{
+    width: 100%;
+    padding: 20px;
+}
+#request-stall-form input{
+    text-align: left;
+}
+/*****************STORE*******************/
+.my-store{
+    box-shadow: 0px 0px 3px grey;
+    padding: 10px;
+}
+/***************ADMIN_PRODUCT********************/
+.images-admin{
+    border: solid 2px green;
+    margin: 20px;
+    max-width: 100%;
+    padding: 20px;
+}
+.images-admin .btn-floating{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.images-admin img{
+    max-width: 100%;
+    box-shadow: 0px 0px 2px grey;
+    margin: 10px;
+}
+.admin-product{
+    max-width: 700px;
+}
+.admin-product label{
+    font-size: 11pt;
+}
+.admin-product table input[type='text'],
+.admin-product table input[type='number']{
+    text-align: left;
+}
+.admin-product table tr{
+    border-bottom: none;
+    line-height: 20px;
+}
+.admin-product table tr td{
+    padding: 0px;
+}
+.add-image-form .input-field{
+    max-width: 300px;
+}
+.add-image-form .add-btn{
+    margin-top: 25px;
+}
+/************************STORE******************/
+.store{
+    box-shadow: none;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.store img{
+    max-width: 100%;
+}
+#availability label{
+    font-size: 10pt;
+}
+.store label{
+    font-size: 10pt;
+}
+#PnSlisting div{
+    overflow: hidden;
+}
+.pointer{
+    cursor: pointer;
+}
+.location{
+    width: 230px;
+    box-shadow: 0 0 2px grey;
+    padding: 10px;
+    margin: 20px;
+}
+.location .row .col{
+    line-height: 1.15;
+    padding: 0;
+}
+.location .col input{
+    height: initial;
+    font-size: 14px;
+    margin: 0;
+}
+.location .panel{
+    height: 20px;
+}
+.location label,
+.locations label{
+    font-size: 10pt;
+}
+#addProductOrService .input-field{
+    margin-bottom: 5px;
+}
+/**************ADMIN-STORE*******************/
+.admin-store{
+    box-shadow: 0 0 5px grey;
+    overflow: hidden;
+}
+/**************DATE PICKER*****************/
+.datepicker-date-display{
+    display: none;
+}
+.datepicker-calendar .select-wrapper{
+    width: 100px;
+    text-align: center;
+}
+.datepicker-modal{
+    overflow-x: hidden;
+    width: 330px;
+    max-width: 330px;
+}
+.book .datepicker-calendar .select-wrapper input.select-dropdown {
+    width: 70px;
+    text-align: center;
+}
+.book .datepicker-calendar button:hover{
+    background-color: silver;
+}
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+    color: var(--main_color);
+}
+.datepicker-cancel:hover, .datepicker-clear:hover, .datepicker-today:hover, .datepicker-done:hover {
+    color: var(--color2);
+    background-color: var(--main_color);
+}
+/****************STORE DIV*******************/
+.store-div{
+    box-shadow: 0px 0px 3px grey;
+}
+.store-div:hover{
+    box-shadow: 0px 0px 8px grey;
+    cursor: pointer;
+}
+.store-div p.s{
+    height: 110px;
+}
+.store-div p.xs{
+    height: 70px;
+}
+.store-div p{
+    overflow: hidden;
+    text-align: justify;
+    line-height: 18px;
+}
+.store-div p:first-child{
+}
+.store-div .store-info{
+    padding: 3% 5%;
+    padding-bottom: 5px;
+}
+.store-div a{
+/*    bottom: 16px;*/
+}
+.store-div img.s{
+    width: 185px;
+    height: 185px;
+}
+.store-div img.xs{
+    width: 120px;
+    height: 120px;
+}
+.store-div img{
+    margin-right: 10px;
+}
+.store-div div{
+    padding-right: 5%;
+}
+/***************STAR RATING******************/
+.star-rating span{
+    top: -6px;
+}
+.star-rating{
+    height: 22px;
+    padding: 0 !important;
+}
+.star-rating.xs{
+    height: 15px;;
+}
+.star-rating.xs i{
+    font-size: 11pt;
+}
+.star-rating.xs span{
+    font-size: 9pt;
+    top: -3px;
+}
+/****************DASHBOARD******************/
+.store-card{
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    margin: 20px;
+}
+.store-card .bottom{
+    height: 30px;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px;
+    left: 0px;
+    position: absolute;
+    color: white;
+}
+.dashboard-data{
+    max-width: 800px;
+    margin: auto;
+    overflow: auto;
+    padding: 10px;
+}
+.dashboard-data.admin{
+    max-width: 1200px;
+}
+.dashboard-data .data{
+    min-width: 500px;
+}
+.dashboard-card .count{
+    font-size: 30pt;
+    margin-left: 30px;
+}
+.dashboard-data .buttons{
+    margin-left: 30px;
+}
+.dashboard-data .buttons a{
+    margin-top: 20px;
+}
+/**************REPORT*************************/
+#reports-page #data-div, #data-div{
+    max-width: 100%;
+    padding: 10px;
+    overflow-x: scroll;
+}
+#reports-page #data-div .data, #data-div .data{
+    min-width: 500px;
+    margin-bottom: 20px;
+}
+#reports-page h6{
+    margin-top: 20px;
+}
+#ajax-report{
+       margin: 50px 0px;
+}
+#ajax-report input{
+    display: block;
+    max-width: 150px;
+    float: right;
+    height: initial;
+}
+#ajax-report label{
+    font-size: 10pt;
+}
+#ajax-report .dataTables_filter{
+    margin-top: 20px;
+    text-align: right;
+}
+#ajax-report .dataTables_length{
+    float: left;
+    margin-top: -20px;
+}
+#ajax-report .dataTables_length select{
+    display: initial;
+    width: auto;
+    height: initial;
+}
+#ajax-report .dataTables_length .select-wrapper{
+    display: none;
+}
+/**************RATE MODAL*******************/
+#rate-modal textarea:placeholder{
+    color: #202020;
+}
+#rate-modal div .btn-small{
+    padding: 0px 5px;
+}
+#rate-modal span{
+    line-height: inherit;
+    top: -3px;
+}
+#rate-modal .input-field{
+    max-width: 100%;
+}
+/*************DATA TABLES*******************/
+.dataTables_wrapper select{
+    display: initial;
+    width: auto;
+    line-height: initial;
+    height: initial;
+}
+/*************** STORE WEBSITE**************/
+.store-website .store-about img{
+    width: 100%;
+    margin: 10px;
+    margin-bottom: 0;
+    max-width: 400px;
+    max-height: 400px;
+}
+.store-website .store-about #store-rating{
+    margin-top: 10px;
+}
+.store-slide-in{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 300ms ease-in, opacity 300ms ease-in;
+}
+.store-slide-in.appear{
+    opacity: 1;
+    transform: translateY(0);
+}
+.store-comments-slide-in{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 300ms ease-in, opacity 300ms ease-in;
+}
+.store-comments-slide-in.appear{
+    opacity: 1;
+    transform: translateY(0);
+}
+.store-about-image{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 300ms ease-in, opacity 300ms ease-in;
+}
+.store-about-image.appear{
+    opacity: 1;
+    transform: translateY(0);
+}
+.store-about-text{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 450ms ease-in, opacity 450ms ease-in;
+}
+.store-about-text.appear{
+    opacity: 1;
+    transform: translateY(0);
+}
+/**************PAGE-NAV*********************/
+#page_nav{
+    display: flex;
+    width: auto;
+    margin: auto;
+    justify-content: center;
+    margin: 10px 0px;
+}
+#page_nav input[type='submit']{
+    margin: 0px 4px;
+    height: 40px;
+    padding: 0px 7px;
+    background-color: transparent;
+    color: black;
+    font-size: 15pt;
+}
+#page_nav input[type='submit']:hover{
+    color: #70db70;
+}
+#page_nav p{
+    line-height: 42px;
+}
+/*********MEDIA QUERIES**********************/
+@media screen and (max-width: 650px){
+    /******PRODUCTS****************/
+    #products-div {
+        padding: 10px 20px;
+    }
+    /**********FORMS LOG IN REGISTER*******/
+    .form-small{
+        width: 300px;
+        height: 400px;
+    }
+    .form-small.register{
+        min-height: 690px;
+    }
+    .form-small img{
+        display: none;
+    }
+    .form-small .right img{
+        display: block;
+    }
+    .form-small .right{
+        width: 100%;
+    }
+    .form-small .right .container{
+        padding: 0px;
+        padding-bottom: 20px;
+    }
+    .form-small .input-field{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px){
+    /******PRODUCTS****************/
+    #products-div {
+        padding: 10px 10px;
+    }
+}
+@media screen and (max-width: 500px){
+    /******PRODUCTS****************/
+    .products .product-small{
+        width: 150px;
+        height: 170px;
+    }
+
+    .products .product-small img{
+        width: 150px;
+        height: 100px;
+    }
+    /**************H1**************/
+    header h1{
+        font-size: 23pt;
+    }
+}
+@media screen and (max-width: 400px){
+    /******PRODUCTS****************/
+    #products-div {
+        padding: 10px 5px;
+    }
+    .products .product-small{
+        width: 120px;
+        height: 150px;
+    }
+
+    .products .product-small img{
+        width: 120px;
+        height: 80px;
+    }
+}
+/************MY OWN TOPPINGS*************/
+.hide-on-xs{
+    display: block;
+}
+.show-on-xs{
+    display: none;
+}
+@media screen and (max-width: 500px){
+    .hide-on-xs{
+        display: none;
+    }
+    .show-on-xs{
+        display: block;
+    }
+}
